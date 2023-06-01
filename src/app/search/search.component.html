@@ -1,0 +1,16 @@
+<div class="container">
+  <input
+    type="text"
+    #inputSearch
+    name="search-input"
+    value="User "
+    class="search-input"
+    (keyup.enter)="onSearch()">
+  <div *ngFor="let user of users" class="search-result">
+    <div class="user">
+      <span>{{user.firstName}} {{user.lastName}}</span>
+      <span>{{user.age}}</span>
+    </div>
+
+  </div>
+</div>
